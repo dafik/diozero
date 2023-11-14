@@ -378,7 +378,7 @@ JNIEXPORT jint JNICALL Java_com_diozero_internal_provider_builtin_serial_NativeS
 	int fd = (*env)->GetIntField(env, fileDesc, fileDescFdField);
 
 	// A hack? Interrupt anything doing a blocking read using this fd
-	raise(SIGINT);
+	//raise(SIGINT);
 
 	return close(fd);
 }
